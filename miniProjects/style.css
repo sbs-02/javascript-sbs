@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: sans-serif;
+  color: beige;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.move1,
+.move2,
+.move3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 30px;
+}
+
+.move {
+  background-color: beige;
+  font-size: large;
+  border: none;
+  border-radius: 30%;
+  padding: 10px;
+  cursor: pointer;
+}
