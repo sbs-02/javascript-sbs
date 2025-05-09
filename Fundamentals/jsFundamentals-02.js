@@ -9,16 +9,16 @@ logger();
 console.log(typeof logger); // function
 
 //Writing a function named fruitProcessor with parameters(apples and oranges) with arguments(5, 0) and (2, 4)
-function fruitProcessor(apples, oranges) {
+function fruitProcessorr(apples, oranges) {
   const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
   return juice;
 }
 
-const appleJuice = fruitProcessor(5, 0);
+const appleJuice = fruitProcessorr(5, 0);
 console.log(appleJuice);
-console.log(fruitProcessor(5, 0));
+console.log(fruitProcessorr(5, 0));
 
-const appleOrangeJuice = fruitProcessor(2, 4);
+const appleOrangeJuice = fruitProcessorr(2, 4);
 console.log(appleOrangeJuice);
 
 //Function Declaration
@@ -62,7 +62,16 @@ const age3 = calcAge3(2002);
 console.log(age3);
 
 //Calling a function within a function
-function fruitProcessor(apples, oranges) {
-  const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+const cutPieces = function (fruit) {
+  return fruit * 4;
+};
+
+const fruitProcessor = function (apples, oranges) {
+  const applePieces = cutPieces(apples);
+  const orangePieces = cutPieces(oranges);
+
+  const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange.`;
   return juice;
-}
+};
+
+console.log(fruitProcessor(2, 3));
